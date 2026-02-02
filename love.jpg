@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Valentine 💖</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #ffccd5;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+    }
+
+    .card {
+      background: white;
+      width: 90%;
+      max-width: 380px;
+      margin: 30px auto;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    img {
+      width: 100%;
+      border-radius: 15px;
+    }
+
+    h1 {
+      margin-top: 15px;
+      color: #e63946;
+    }
+
+    p {
+      font-size: 16px;
+      color: #444;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 18px;
+      margin: 10px;
+      border-radius: 25px;
+      border: none;
+      cursor: pointer;
+    }
+
+    #yes {
+      background: #e63946;
+      color: white;
+    }
+
+    #no {
+      background: #adb5bd;
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card" id="card">
+    <img src="photo.jpg" alt="us">
+    <h1>💖 Will you be my Valentine, Kartik? 💖</h1>
+    <p>
+      From holding hands to holding hearts…  
+      I choose you. Always. 🧿✨
+    </p>
+
+    <button id="yes" onclick="yes()">YES 💘</button>
+    <button id="no" onmouseover="move()">NO 😜</button>
+  </div>
+
+<script>
+  function yes() {
+    document.body.innerHTML = `
+      <div class="card">
+        <h1>😍 Yayyy! I knew it 💖</h1>
+        <p>
+          You + Me = Forever 💫  
+          Happy Valentine’s Day ❤️
+        </p>
+      </div>
+    `;
+  }
+
+  function move() {
+    const no = document.getElementById("no");
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 100);
+    no.style.left = x + "px";
+    no.style.top = y + "px";
+  }
+</script>
+
+</body>
+</html>
